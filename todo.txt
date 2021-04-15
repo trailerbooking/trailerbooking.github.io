@@ -1,9 +1,9 @@
 TODO for site:
 
-
-================================================
-Add JavaScript data picker for Safari:
-(source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date)
+Ideas for datepicker:
+https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/datepicker-dialog.html
+ - or:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date (source below)
 
 // define variables
 var nativePicker = document.querySelector('.nativeDatePicker');
