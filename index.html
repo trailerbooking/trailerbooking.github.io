@@ -28,10 +28,6 @@
         z-index: 2;
         line-height: 83px;
       }
-      textarea {
-        width: calc(100% - 12px);
-        padding: 5px;
-      }
       .bookingbox {
         max-width: 500px;
         display: flex;
@@ -64,7 +60,7 @@
         width: 100%;
         height: 100%;
       }
-      input, select, textarea {
+      input, select {
         margin-bottom: 10px;
         border: 1px solid #ccc;
         border-radius: 3px;
@@ -73,10 +69,10 @@
         width: calc(100% - 10px);
         padding: 5px;
       }
-      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      .item:hover p, .item:hover i, input:hover::placeholder {
         color:  #669999;
       }
-      .item input:hover, .item select:hover, .item textarea:hover {
+      .item input:hover, .item select:hover {
         border: 1px solid transparent;
         box-shadow: 0 0 3px 0  #669999;
         color: #669999;
@@ -87,24 +83,6 @@
       }
       .item span {
         color: red;
-      }
-      .input-container input {
-        border: none;
-        box-sizing: border-box;
-        outline: 0;
-        padding: .75rem;
-        position: relative;
-        width: 100%;
-      }
-      .question span {
-        margin-left: 30px;
-      }
-      .question-answer label {
-        display: block;
-      }
-      .flax {
-        display:flex;
-        justify-content:space-around;
       }
       input[type=date] {
         color: #222;
@@ -162,57 +140,49 @@
           <h1>Trailerbooking</h1>
         </div>
         <div class="item">
-          <label for="name">Hvem<span>*</span></label>
+          <label for="name">Hvem <span>*</span></label>
           <input id="name" type="text" name="name" required/>
         </div>
         <div class="item">
-          <label for="bdate">Dato<span>*</span></label>
-          <input id="bdate" type="date" name="bdate" required/>
           <i class="fas fa-calendar-alt"></i>
-        </div>
-        <div class="flax">
-          <div class="item">
-            <p>Fra</p>
-            <select>
-              <option selected value="" disabled selected></option>
-              <option value= "07:00">07:00</option>
-              <option value= "08:00">08:00</option>
-              <option value= "09:00">09:00</option>
-              <option value= "10:00">10:00</option>
-              <option value= "11:00">11:00</option>
-              <option value= "12:00">12:00</option>
-              <option value= "13:00">13:00</option>
-              <option value= "14:00">14:00</option>
-              <option value= "15:00">15:00</option>
-              <option value= "16:00">16:00</option>
-              <option value= "17:00">17:00</option>
-              <option value= "18:00">18:00</option>
-              <option value= "19:00">19:00</option>
-            </select>
-          </div>
-          <div class="item">
-            <p>Til</p>
-            <select>
-              <option selected value="" disabled selected></option>
-              <option value= "08:00">08:00</option>
-              <option value= "09:00">09:00</option>
-              <option value= "10:00">10:00</option>
-              <option value= "11:00">11:00</option>
-              <option value= "12:00">12:00</option>
-              <option value= "13:00">13:00</option>
-              <option value= "14:00">14:00</option>
-              <option value= "15:00">15:00</option>
-              <option value= "16:00">16:00</option>
-              <option value= "17:00">17:00</option>
-              <option value= "18:00">18:00</option>
-              <option value= "19:00">19:00</option>
-              <option value= "20:00">20:00</option>
-            </select>
-          </div>
+          <label for="bdate">Dato <span>*</span></label>
+          <input id="bdate" type="date" name="bdate" required/>
         </div>
         <div class="item">
-          <label for="instructions">Noter</label>
-          <textarea id="instructions" rows="3"></textarea>
+          <p>Fra</p>
+          <select>
+            <option selected value="" disabled selected></option>
+            <option value= "07:00">07:00</option>
+            <option value= "08:00">08:00</option>
+            <option value= "09:00">09:00</option>
+            <option value= "10:00">10:00</option>
+            <option value= "11:00">11:00</option>
+            <option value= "12:00">12:00</option>
+            <option value= "13:00">13:00</option>
+            <option value= "14:00">14:00</option>
+            <option value= "15:00">15:00</option>
+            <option value= "16:00">16:00</option>
+            <option value= "17:00">17:00</option>
+            <option value= "18:00">18:00</option>
+            <option value= "19:00">19:00</option>
+          </select>
+          <p>Til</p>
+          <select>
+            <option selected value="" disabled selected></option>
+            <option value= "08:00">08:00</option>
+            <option value= "09:00">09:00</option>
+            <option value= "10:00">10:00</option>
+            <option value= "11:00">11:00</option>
+            <option value= "12:00">12:00</option>
+            <option value= "13:00">13:00</option>
+            <option value= "14:00">14:00</option>
+            <option value= "15:00">15:00</option>
+            <option value= "16:00">16:00</option>
+            <option value= "17:00">17:00</option>
+            <option value= "18:00">18:00</option>
+            <option value= "19:00">19:00</option>
+            <option value= "20:00">20:00</option>
+          </select>
         </div>
         <div class="btn-block">
           <button type="submit" href="/">Book</button>
