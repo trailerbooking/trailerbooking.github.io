@@ -3,6 +3,7 @@ TODO for site:
 
 ================================================
 Add JavaScript data picker for Safari:
+(source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date)
 
 // define variables
 var nativePicker = document.querySelector('.nativeDatePicker');
