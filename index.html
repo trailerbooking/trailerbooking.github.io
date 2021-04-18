@@ -2,20 +2,6 @@
 <html>
   <head>
 
-    <?php
-      $fileWrite = '';
-      $myFile = "testFile.txt";
-      if(isset($_POST['fileWrite']) && !empty($_POST['fileWrite'])) {
-        $fileWrite = $_POST['fileWrite'].PHP_EOL;
-      }
-
-      if($fileWrite) {
-        $fh = fopen($myFile, 'a') or die("can't open file"); //Make sure you have permission
-        fwrite($fh, $fileWrite);
-        fclose($fh);
-      }
-    ?>
-
     <meta charset="utf-8">
     <title>Trailerbooking</title>
 
@@ -43,29 +29,13 @@
         line-height: 83px;
       }
       .bookingbox {
-        min-width: 400px;
-        max-width: 500px;
+        min-width: 600px;
+        max-width: 700px;
         display: flex;
         justify-content: center;
         align-items: center;
         height: inherit;
         padding: 20px;
-      }
-      .calendarbox {
-        min-width: 400px;
-        max-width: 500px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: inherit;
-        padding: 20px;
-      }
-      .calendar {
-        position: relative;
-        height: 360px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
       }
       form {
         width: 100%;
@@ -91,61 +61,7 @@
         width: 100%;
         height: 100%;
       }
-      input, select {
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-      }
-      input {
-        width: calc(100% - 10px);
-        padding: 5px;
-      }
-      .item:hover p, .item:hover i, input:hover::placeholder {
-        color:  #669999;
-      }
-      .item input:hover, .item select:hover {
-        border: 1px solid transparent;
-        box-shadow: 0 0 3px 0  #669999;
-        color: #669999;
-      }
-      .item {
-        position: relative;
-        margin: 10px 0;
-      }
-      .item span {
-        color: red;
-      }
-      input[type=date] {
-        color: #222;
-        left: 50%;
-        top: 50%;
-        width: calc(100% - 10px);
-      }
-      input[type=date]::-webkit-calendar-picker-indicator {
-        color: #999;
-        height: 8px;
-        position: relative;
-        width: 8px;
-        z-index: 0;
-      }
-      .btn-block {
-        margin-top: 10px;
-        text-align: center;
-      }
-      button {
-        width: 150px;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        background:  #669999;
-        font-size: 16px;
-        color: #fff;
-        cursor: pointer;
-      }
-      button:hover {
-        background:  #a3c2c2;
-      }
-      @media (min-width: 500px) {
+      @media (min-width: 600px) {
         .name-item, .city-item {
           display: flex;
           flex-wrap: wrap;
@@ -170,65 +86,7 @@
         <div class="banner">
           <h1>Trailerbooking</h1>
         </div>
-        <div class="item">
-          <label for="name">Hvem <span>*</span></label>
-          <input id="name" type="text" name="name" required/>
-        </div>
-        <div class="item">
-          <i class="fas fa-calendar-alt"></i>
-          <label for="bdate">Dato <span>*</span></label>
-          <input id="bdate" type="date" name="bdate" required/>
-        </div>
-        <div class="item">
-          <p>Fra</p>
-          <select>
-            <option selected value="" disabled selected></option>
-            <option value= "07:00">07:00</option>
-            <option value= "08:00">08:00</option>
-            <option value= "09:00">09:00</option>
-            <option value= "10:00">10:00</option>
-            <option value= "11:00">11:00</option>
-            <option value= "12:00">12:00</option>
-            <option value= "13:00">13:00</option>
-            <option value= "14:00">14:00</option>
-            <option value= "15:00">15:00</option>
-            <option value= "16:00">16:00</option>
-            <option value= "17:00">17:00</option>
-            <option value= "18:00">18:00</option>
-            <option value= "19:00">19:00</option>
-          </select>
-          <p>Til</p>
-          <select>
-            <option selected value="" disabled selected></option>
-            <option value= "08:00">08:00</option>
-            <option value= "09:00">09:00</option>
-            <option value= "10:00">10:00</option>
-            <option value= "11:00">11:00</option>
-            <option value= "12:00">12:00</option>
-            <option value= "13:00">13:00</option>
-            <option value= "14:00">14:00</option>
-            <option value= "15:00">15:00</option>
-            <option value= "16:00">16:00</option>
-            <option value= "17:00">17:00</option>
-            <option value= "18:00">18:00</option>
-            <option value= "19:00">19:00</option>
-            <option value= "20:00">20:00</option>
-          </select>
-        </div>
-        <div class="btn-block">
-          <button type="submit" href="/">Book</button>
-        </div>
-      </form>
-    </div>
-        <div class="calendarbox">
-      <form action="/">
-        <div class="calendar">
-          CALENDAR
-          <form id="some" name="someName" method="post">
-          <input type="text" id="some1" class="someClass" value="" name="fileWrite"/>
-          <input type="submit" value="submit" class="submitClass"/>
-          </form>
-        </div>
+        <embed src="https://teamup.com/ks2z8bjoxyub73ef4m" style="width:600px; height: 500px;">
       </form>
     </div>
   </body>
