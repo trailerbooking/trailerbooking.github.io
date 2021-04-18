@@ -7,11 +7,10 @@
 
     <style>
       html, body {
-        min-height: 100%;
         display: flex;
         justify-content: center;
       }
-      body, div, form, input, select, label, p {
+      body, div, form {
         padding: 0;
         margin: 0;
         outline: none;
@@ -29,8 +28,7 @@
         line-height: 83px;
       }
       .bookingbox {
-        min-width: 600px;
-        max-width: 700px;
+        min-width: 800px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,22 +59,9 @@
         width: 100%;
         height: 100%;
       }
-      @media (min-width: 600px) {
-        .name-item, .city-item {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-        }
-        .name-item input, .name-item div {
-          width: calc(100% - 20px);
-        }
-        .name-item div input {
-          width:97%;
-        }
-        .name-item div label {
-          display:block;
-          padding-bottom:5px;
-        }
+      .embedded {
+        position: relative;
+        height: 600px;
       }
     </style>
   </head>
@@ -86,7 +71,9 @@
         <div class="banner">
           <h1>Trailerbooking</h1>
         </div>
-        <embed src="https://teamup.com/ks2z8bjoxyub73ef4m" style="width:600px; height: 500px;">
+        <div class=embedded>
+          <embed src="https://teamup.com/ks2z8bjoxyub73ef4m" style="width: 100%; height: 100%;">
+        </div>
       </form>
     </div>
   </body>
